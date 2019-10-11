@@ -10,7 +10,9 @@
   * `House#repeat_visitors`
   * `House.candy_types` - unique list of all the candy types offered by the houses
 
+## ERDs
 
+![ERD2](./image_1.jpg)
   
 * Kid
   * will initialize with name - string, costume - string, mischief_level - integer

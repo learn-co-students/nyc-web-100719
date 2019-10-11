@@ -7,6 +7,13 @@
 * [ ] Demonstrate single source of truth by not storing collections of objects on other objects
 * [ ] Demonstrate single source of truth by not storing one object in multiple collections
 
+## ERD Diagrams
+
+![ERD 1](./many_to_many_erd.jpg)
+![ERD2](./image_2.jpg)
+![ERD2](./image_3.jpg)
+![ERD2](./image_4.jpg)
+
 ## Deliverables
 
 * Create a _User_ class. The class should have these methods:
