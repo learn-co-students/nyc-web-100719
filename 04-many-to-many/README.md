@@ -46,7 +46,9 @@
 
 **Doctor's Office**
 * doctor ----< appointments >---- patient
+* Doctor.new(name)
 * Appointment.new(time, date, location, doctor, patient)
+* Patient.new(name)
 <br>
 
 **Family Therapist**
@@ -60,6 +62,7 @@
 * user ----< like >---- tweet >---- user
 * User.new(username)
 * Tweet.new(message, user)
+* Like.new(user, tweet)
 
 
 ## Discussion Questions
