@@ -5,6 +5,7 @@ task :console do
   Pry.start
 end
 
+desc 'Makes a dog bark'
 task :dog do
   puts 'woof'
 end
