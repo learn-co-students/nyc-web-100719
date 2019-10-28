@@ -1,0 +1,7 @@
+<h1>👯‍♂️ All Ken's Gifts!!! 🎁</h1>
+
+<% @gifts.each do |gift|%>
+  <h2><%= gift.name %></h2>
+  <p>Price: $<%= gift.price %></p>
+  <strong><p>From: <%= gift.gifter %></p></strong>
+<% end %>
