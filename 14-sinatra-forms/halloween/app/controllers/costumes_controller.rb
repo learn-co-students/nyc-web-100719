@@ -31,7 +31,6 @@ class CostumesController < ApplicationController
 
   # destroy
   delete '/costumes/:id' do
-    binding.pry
     costume = Costume.find(params[:id])
     costume.destroy
     redirect '/costumes'
