@@ -1,0 +1,14 @@
+<h1>yo</h1>
+<a href="/costumes/new"><h3>Make a new 'stume! 🦁</h3></a>
+ 
+<% @costumes.each do |costume| %>
+  <a href="/costumes/<%= costume.id %>"><h3><%= costume.name %></h3></a>
+  <p>Size: <%= costume.size %></p>
+  <p>Price: $<%= costume.price %></p>
+  
+  <form action="/costumes/<%= costume.id %>" method="POST">
+    <input type="submit" value="DELETE THIS COSTUME">
+  </form>
+  
+  <hr>
+<% end %>
