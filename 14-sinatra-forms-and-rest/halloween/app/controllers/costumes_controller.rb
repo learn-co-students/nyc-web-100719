@@ -29,6 +29,21 @@ class CostumesController < ApplicationController
     erb :'costumes/show'
   end
 
+  # edit
+  get '/costumes/:id/edit' do
+    @costume = Costume.find(params[:id])
+
+    erb :'/costumes/edit'
+  end
+
+  # update
+  patch '/costumes/:id' do
+    costume = Costume.find(params[:id])
+    costume.update(params[:costume])
+
+    redirect "/costumes/#{costume.id}"
+  end
+  
   # destroy
   delete '/costumes/:id' do
     costume = Costume.find(params[:id])
