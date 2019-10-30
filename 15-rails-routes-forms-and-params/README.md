@@ -2,15 +2,15 @@
 
 ### Learning Goals
 
-* [ ] Create a new Rails application
-* [ ] Describe similarities between Sinatra routing & Rails routing
-* [ ] Create a controller
-* [ ] Create actions/methods for a RESTful controller
-* [ ] Create views
-* [ ] Create a model
-* [ ] Create routes
-* [ ] Create a form using `form_for`
-* [ ] Implement strong params
+* [x] Create a new Rails application
+* [x] Describe similarities between Sinatra routing & Rails routing
+* [x] Create a controller
+* [x] Create actions/methods for a RESTful controller
+* [x] Create views
+* [x] Create a model
+* [x] Create routes
+* [x] Create a form using `form_for`
+* [x] Implement strong params
 
 ### Things You Should Bookmark
 
@@ -22,3 +22,10 @@
     * [form_for (ActionView::Helpers::FormHelper) - APIdock](https://apidock.com/rails/ActionView/Helpers/FormHelper/form_for) - `form_for` is the older way of creating a form in Rails *with* an ActiveRecord model; it has been 'soft deprecated' and will be removed at some point in future versions of Rails
     * [form_tag (ActionView::Helpers::FormHelper) - APIdock](https://apidock.com/rails/ActionView/Helpers/FormTagHelper/form_tag) - `form_tag` is the older way of creating a generic form in Rails *without* an ActiveRecord model; it has been 'soft deprecated' and will be removed at some point in future versions of Rails
 * [Strong Params](https://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)
+
+### Rails Commands We Used In Lecture
+
+* `rails new <app-name> -G` - creates a new application without a .git folder
+* `rails routes` - prints all the defined routes on the screen
+* `rails g migration <migration-name> <field_name:datatype> <field_name:datatype>` - creates a migration with the indicated fields and datatypes
+* `rails db:migrate` - run all outstanding migrations (all (or most) of the db commands are the same as we used in ActiveRecord in Mod 1 and Sinatra, e.g. `rails db:migrate:status`, `rails db:rollback`)

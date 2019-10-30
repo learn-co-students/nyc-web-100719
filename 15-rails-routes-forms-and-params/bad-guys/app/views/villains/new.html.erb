@@ -1,0 +1,14 @@
+<h1>Create a New Villain 🤡</h1>
+
+<%= form_for(@villain) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :catch_phrase %>
+  <%= f.text_field :catch_phrase %>
+  <br>
+  <%= f.label :power %>
+  <%= f.text_field :power %>
+  <br>
+  <%= f.submit %>
+<% end %>
