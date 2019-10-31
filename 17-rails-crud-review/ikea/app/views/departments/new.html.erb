@@ -1,0 +1,12 @@
+<h1>New Departments</h1>
+
+<p>Suggest a department</p>
+
+<%= form_for @department do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+
+<% end %>

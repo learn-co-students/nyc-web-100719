@@ -1,0 +1,8 @@
+<h1>Welcome to IKEA</h1>
+
+<% @departments.each do |dep| %>
+
+  <%= link_to dep.name, department_path(dep) %>
+  <hr>
+
+<% end %>
