@@ -1,0 +1,14 @@
+<h1>Treaters</h1>
+
+<% @treaters.each do |treater| %>
+
+  <div style="width: 100%; border: solid magenta 2px;"></div>
+
+  <p>Name: <%= treater.name %></p>
+  <p>Age: <%= treater.age %></p>
+  <p>Toilet Paper for Neighborhood: <%= treater.tp %> rolls</p>
+  <p>Candy: <%= treater.candies.length %></p>
+
+  <br>
+
+<% end %>

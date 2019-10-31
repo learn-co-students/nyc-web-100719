@@ -1,0 +1,587 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTreaters (20191031141436)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "treaters" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "age" integer, "tp" integer)[0m
+  ↳ db/migrate/20191031141436_create_treaters.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191031141436"]]
+  ↳ bin/rails:9
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-31 14:18:30.331011"], ["updated_at", "2019-10-31 14:18:30.331011"]]
+  ↳ bin/rails:9
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-10-31 10:20:45 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/gems/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/gems/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/gems/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 28ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-31 10:21:16 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/gems/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/gems/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/gems/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/treaters" for 127.0.0.1 at 2019-10-31 10:21:39 -0400
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  Rendered treaters/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 429ms (Views: 426.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateCandies (20191031142332)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20191031142332_create_candies.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "candies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "sugar_level" float)[0m
+  ↳ db/migrate/20191031142332_create_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191031142332"]]
+  ↳ bin/rails:9
+  [1m[35m (14.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT  "treaters".* FROM "treaters" WHERE "treaters"."name" = ? AND "treaters"."age" = ? AND "treaters"."tp" = ? LIMIT ?[0m  [["name", "Steven"], ["age", 25], ["tp", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mTreater Create (0.4ms)[0m  [1m[32mINSERT INTO "treaters" ("name", "age", "tp") VALUES (?, ?, ?)[0m  [["name", "Steven"], ["age", 25], ["tp", 2]]
+  ↳ db/seeds.rb:1
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:1
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT  "treaters".* FROM "treaters" WHERE "treaters"."name" = ? AND "treaters"."age" = ? AND "treaters"."tp" = ? LIMIT ?[0m  [["name", "Chett"], ["age", 18], ["tp", 67], ["LIMIT", 1]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTreater Create (0.4ms)[0m  [1m[32mINSERT INTO "treaters" ("name", "age", "tp") VALUES (?, ?, ?)[0m  [["name", "Chett"], ["age", 18], ["tp", 67]]
+  ↳ db/seeds.rb:2
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mTreater Load (0.1ms)[0m  [1m[34mSELECT  "treaters".* FROM "treaters" WHERE "treaters"."name" = ? AND "treaters"."age" = ? AND "treaters"."tp" = ? LIMIT ?[0m  [["name", "Chett Jr."], ["age", 20], ["tp", 0], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mTreater Create (0.3ms)[0m  [1m[32mINSERT INTO "treaters" ("name", "age", "tp") VALUES (?, ?, ?)[0m  [["name", "Chett Jr."], ["age", 20], ["tp", 0]]
+  ↳ db/seeds.rb:3
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mTreater Load (0.7ms)[0m  [1m[34mSELECT  "treaters".* FROM "treaters" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/treaters" for ::1 at 2019-10-31 10:39:40 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/gems/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  Rendered treaters/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 1052ms (Views: 1039.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/treaters" for ::1 at 2019-10-31 10:40:14 -0400
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.3ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  Rendered treaters/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/treaters" for ::1 at 2019-10-31 10:40:37 -0400
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.1ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  Rendered treaters/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/treaters" for ::1 at 2019-10-31 10:41:47 -0400
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  Rendered treaters/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/treaters" for ::1 at 2019-10-31 10:42:00 -0400
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.6ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  Rendered treaters/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/treaters" for ::1 at 2019-10-31 10:42:15 -0400
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  Rendered treaters/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/treaters" for ::1 at 2019-10-31 10:43:22 -0400
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  [1m[36mCandy Load (0.7ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 1]]
+  ↳ app/views/treaters/index.html.erb:10
+  Rendered treaters/index.html.erb within layouts/application (66.6ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: candies.treater_id: SELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?):
+     7:   <p>Name: <%= treater.name %></p>
+     8:   <p>Age: <%= treater.age %></p>
+     9:   <p>Toilet Paper for Neighborhood: <%= treater.tp %> rolls</p>
+    10:   <p>Candy: <%= treater.candies.length %></p>
+    11: 
+    12:   <br>
+    13: 
+  
+app/views/treaters/index.html.erb:10:in `block in _app_views_treaters_index_html_erb__4469497943544659371_70302920576340'
+app/views/treaters/index.html.erb:3:in `_app_views_treaters_index_html_erb__4469497943544659371_70302920576340'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddTreaterIdToCandies (20191031144523)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "candies" ADD "treater_id" integer[0m
+  ↳ db/migrate/20191031144523_add_treater_id_to_candies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191031144523"]]
+  ↳ bin/rails:9
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/treaters" for ::1 at 2019-10-31 10:45:54 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/gems/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 1]]
+  ↳ app/views/treaters/index.html.erb:10
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 2]]
+  ↳ app/views/treaters/index.html.erb:10
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 3]]
+  ↳ app/views/treaters/index.html.erb:10
+  Rendered treaters/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 349ms (Views: 335.9ms | ActiveRecord: 1.9ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/treaters" for ::1 at 2019-10-31 11:00:59 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/share/gems/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 1]]
+  ↳ app/views/treaters/index.html.erb:10
+  [1m[36mCandy Load (0.1ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 2]]
+  ↳ app/views/treaters/index.html.erb:10
+  [1m[36mCandy Load (0.1ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 3]]
+  ↳ app/views/treaters/index.html.erb:10
+  Rendered treaters/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 337ms (Views: 321.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:01:09 -0400
+Processing by CandiesController#show as HTML
+  Parameters: {"id"=>"new"}
+  Rendering candies/show.html.erb within layouts/application
+  Rendered candies/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:02:15 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 92ms (Views: 84.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/candies" for ::1 at 2019-10-31 11:03:51 -0400
+Processing by CandiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HbWIQe8TUk9GxNlS6reIfmuISlPGRUl6QI+loj6UOiYsylMyhmvmRfEFhRYG3mgDo0QlbDHmlp+ZYE7iXPsjEw==", "candy"=>{"name"=>"Black Licorice-ish", "sugar_level"=>"6.66"}, "commit"=>"Create Candy"}
+No template found for CandiesController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:07:35 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 33ms (Views: 25.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/candies" for ::1 at 2019-10-31 11:07:38 -0400
+Processing by CandiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LPwXxAQGzQVeNKAw+G5Wg/UUQPlMrZYxj6E8vZeqdP0dg8y3bX55D+n1/HQUB7b+PdgvxrsOSdRWTtf99cVtyA==", "candy"=>{"name"=>"Black Licorice-ish", "sugar_level"=>"6.66"}, "commit"=>"Create Candy"}
+No template found for CandiesController#create, rendering head :no_content
+Completed 204 No Content in 81755ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:13:21 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/candies" for ::1 at 2019-10-31 11:13:34 -0400
+Processing by CandiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H/421C72NpW3mJoo0i/gwqvXCJhFivOqu94yXGJ/SwYuge2nR46CnwBZxmw+RgC/Yxtnp7IpLE9iMdkcABBSMw==", "candy"=>{"name"=>"Black Licorice-ish", "sugar_level"=>"6.66"}, "commit"=>"Create Candy"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/candies_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/candies_controller.rb:10
+Redirected to http://localhost:3000/candies
+Completed 302 Found in 16ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/candies" for ::1 at 2019-10-31 11:13:34 -0400
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:5
+  Rendered candies/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:19:18 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+     8:   <%= f.label :sugar_level %>
+     9:   <%= f.text_field :sugar_level %>
+    10: 
+    11:   <%= f.collection_select(:candy, :treater_id, Treater.all, :id, :name, prompt: true) %>
+    12: 
+    13:   <%= f.submit %>
+    14: 
+  
+app/views/candies/new.html.erb:11:in `block in _app_views_candies_new_html_erb___4019303414210198401_69895629927600'
+app/views/candies/new.html.erb:3:in `_app_views_candies_new_html_erb___4019303414210198401_69895629927600'
+Started GET "/candies/new" for ::1 at 2019-10-31 11:19:43 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :id:Symbol):
+     8:   <%= f.label :sugar_level %>
+     9:   <%= f.text_field :sugar_level %>
+    10: 
+    11:   <%= f.collection_select(:candy, :treater_id, Treater.all, :id, :id, prompt: true) %>
+    12: 
+    13:   <%= f.submit %>
+    14: 
+  
+app/views/candies/new.html.erb:11:in `block in _app_views_candies_new_html_erb___4019303414210198401_69895462580420'
+app/views/candies/new.html.erb:3:in `_app_views_candies_new_html_erb___4019303414210198401_69895462580420'
+Started GET "/candies/new" for ::1 at 2019-10-31 11:21:28 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (318.7ms)
+Completed 500 Internal Server Error in 323ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `treater' for #<#<Class:0x00007f239ddd6248>:0x00007f23a4015a30>
+Did you mean?  treaters_url):
+     8:   <%= f.label :sugar_level %>
+     9:   <%= f.text_field :sugar_level %>
+    10: 
+    11:   <%= f.collection_select(:candies, :treater_id, Treater.all, :name, treater) %>
+    12: 
+    13:   <%= f.submit %>
+    14: 
+  
+app/views/candies/new.html.erb:11:in `block in _app_views_candies_new_html_erb___4019303414210198401_69895526068540'
+app/views/candies/new.html.erb:3:in `_app_views_candies_new_html_erb___4019303414210198401_69895526068540'
+Started GET "/candies/new" for ::1 at 2019-10-31 11:22:00 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+     8:   <%= f.label :sugar_level %>
+     9:   <%= f.text_field :sugar_level %>
+    10: 
+    11:   <%= f.collection_select(:candy, :treater_id, Treater.all, :id, :name) %>
+    12: 
+    13:   <%= f.submit %>
+    14: 
+  
+app/views/candies/new.html.erb:11:in `block in _app_views_candies_new_html_erb___4019303414210198401_69895629510460'
+app/views/candies/new.html.erb:3:in `_app_views_candies_new_html_erb___4019303414210198401_69895629510460'
+Started GET "/candies/new" for ::1 at 2019-10-31 11:22:12 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+     8:   <%= f.label :sugar_level %>
+     9:   <%= f.text_field :sugar_level %>
+    10: 
+    11:   <%= f.collection_select(:candies, :treater_id, Treater.all, :id, :name) %>
+    12: 
+    13:   <%= f.submit %>
+    14: 
+  
+app/views/candies/new.html.erb:11:in `block in _app_views_candies_new_html_erb___4019303414210198401_69895426076560'
+app/views/candies/new.html.erb:3:in `_app_views_candies_new_html_erb___4019303414210198401_69895426076560'
+Started GET "/candies/new" for ::1 at 2019-10-31 11:22:49 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+     8:   <%= f.label :sugar_level %>
+     9:   <%= f.text_field :sugar_level %>
+    10: 
+    11:   <%= f.collection_select :candies, :treater_id, Treater.all, :id, :name %>
+    12: 
+    13:   <%= f.submit %>
+    14: 
+  
+app/views/candies/new.html.erb:11:in `block in _app_views_candies_new_html_erb___4019303414210198401_69895467588740'
+app/views/candies/new.html.erb:3:in `_app_views_candies_new_html_erb___4019303414210198401_69895467588740'
+Started GET "/candies/new" for ::1 at 2019-10-31 11:23:36 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+     8:   <%= f.label :sugar_level %>
+     9:   <%= f.text_field :sugar_level %>
+    10: 
+    11:   <%= f.collection_select :candy, :treater_id, @treaters, :id, :name %>
+    12: 
+    13:   <%= f.submit %>
+    14: 
+  
+app/views/candies/new.html.erb:11:in `block in _app_views_candies_new_html_erb___4019303414210198401_69895526085320'
+app/views/candies/new.html.erb:3:in `_app_views_candies_new_html_erb___4019303414210198401_69895526085320'
+Started GET "/candies/new" for ::1 at 2019-10-31 11:23:56 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  [1m[36mTreater Load (0.5ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/candies/new.html.erb:11
+  Rendered candies/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 59ms (Views: 55.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:24:13 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/candies/new.html.erb:11
+  Rendered candies/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:25:26 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  [1m[36mTreater Load (0.3ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/candies/new.html.erb:11
+  Rendered candies/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:26:04 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/candies/new.html.erb:11
+  Rendered candies/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/candies" for ::1 at 2019-10-31 11:26:34 -0400
+Processing by CandiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TFnNYSLLZbPswu3QNIcOJmYaKSs/srQSNsx6nNitmEV9JhYSS7PRuVsDsZTY7u5brtZGFMgRa/fvI5HcusKBcA==", "candy"=>{"name"=>"Reese's", "sugar_level"=>"44", "treater_id"=>"3"}, "commit"=>"Create Candy"}
+Unpermitted parameter: :treater_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/candies_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/candies_controller.rb:10
+Redirected to http://localhost:3000/candies
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/candies" for ::1 at 2019-10-31 11:26:34 -0400
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.6ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:5
+  Rendered candies/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:26:57 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/candies/new.html.erb:11
+  Rendered candies/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 41ms (Views: 28.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/candies" for ::1 at 2019-10-31 11:27:06 -0400
+Processing by CandiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GV0Kcb8/YErqrFbG9IyV2hx+Zdpi2hU1kJPRpUUhvtQoItEC1kfUQF1tCoIY5XWn1LIK5ZV5ytBJfDrlJ06n4Q==", "candy"=>{"name"=>"Reese's", "sugar_level"=>"44", "treater_id"=>"3"}, "commit"=>"Create Candy"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/candies_controller.rb:10
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT  "treaters".* FROM "treaters" WHERE "treaters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/candies_controller.rb:10
+  [1m[36mCandy Create (0.9ms)[0m  [1m[32mINSERT INTO "candies" ("name", "sugar_level", "treater_id") VALUES (?, ?, ?)[0m  [["name", "Reese's"], ["sugar_level", 44.0], ["treater_id", 3]]
+  ↳ app/controllers/candies_controller.rb:10
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/candies_controller.rb:10
+Redirected to http://localhost:3000/candies
+Completed 302 Found in 15ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/candies" for ::1 at 2019-10-31 11:27:06 -0400
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:5
+  Rendered candies/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/treaters" for ::1 at 2019-10-31 11:27:14 -0400
+Processing by TreatersController#index as HTML
+  Rendering treaters/index.html.erb within layouts/application
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT "treaters".* FROM "treaters"[0m
+  ↳ app/views/treaters/index.html.erb:3
+  [1m[36mCandy Load (0.3ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 1]]
+  ↳ app/views/treaters/index.html.erb:10
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 2]]
+  ↳ app/views/treaters/index.html.erb:10
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies" WHERE "candies"."treater_id" = ?[0m  [["treater_id", 3]]
+  ↳ app/views/treaters/index.html.erb:10
+  Rendered treaters/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/candies" for ::1 at 2019-10-31 11:28:19 -0400
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:5
+  [1m[36mTreater Load (0.1ms)[0m  [1m[34mSELECT  "treaters".* FROM "treaters" WHERE "treaters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/candies/index.html.erb:9
+  Rendered candies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candies" for ::1 at 2019-10-31 11:28:30 -0400
+Processing by CandiesController#index as HTML
+  Rendering candies/index.html.erb within layouts/application
+  [1m[36mCandy Load (0.2ms)[0m  [1m[34mSELECT "candies".* FROM "candies"[0m
+  ↳ app/views/candies/index.html.erb:5
+  [1m[36mTreater Load (0.2ms)[0m  [1m[34mSELECT  "treaters".* FROM "treaters" WHERE "treaters"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/candies/index.html.erb:9
+  Rendered candies/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candies/new" for ::1 at 2019-10-31 11:31:02 -0400
+Processing by CandiesController#new as HTML
+  Rendering candies/new.html.erb within layouts/application
+  Rendered candies/new.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+     8:   <%= f.label :sugar_level %>
+     9:   <%= f.text_field :sugar_level %>
+    10: 
+    11:   <%= f.collection_select :post, :treater_id, Treater.all, :id, :name %>
+    12: 
+    13:   <%= f.submit %>
+    14: 
+  
+app/views/candies/new.html.erb:11:in `block in _app_views_candies_new_html_erb___4019303414210198401_69895391976200'
+app/views/candies/new.html.erb:3:in `_app_views_candies_new_html_erb___4019303414210198401_69895391976200'

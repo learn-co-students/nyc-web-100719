@@ -1,0 +1,13 @@
+<div style="background: orange;">
+
+  <h1>Candies#index</h1>
+
+  <% @candies.each do |c| %>
+
+  <p>Name: <%= c.name %></p>
+  <p>Sugar Level: <%= c.sugar_level %></p>
+  <p>Treater: <%= c.treater.name %></p>
+
+  <% end %>
+
+</div>
