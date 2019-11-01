@@ -1,0 +1,20 @@
+<div style="background: orange;">
+
+  <h1>Candies#index</h1>
+
+
+  <ul>
+    <% @candies.each do |c| %>
+    <li>
+      <%=link_to "Name: #{c.name}", candy_path(c)%>
+    </li>
+
+    <% end %>
+  </ul>
+
+
+
+
+
+
+</div>
