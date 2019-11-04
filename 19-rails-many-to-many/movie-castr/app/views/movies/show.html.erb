@@ -1,0 +1,10 @@
+<h1>🍿🎥 Cast of <i><%= @movie.title %></i>: 🎬🧟‍♀️</h1>
+
+<% @movie.roles.each do |role| %>
+  <% if role.actor %>
+    <%= "#{role.name}: #{role.actor.name}" %>
+  <% else %>
+    <%= "#{role.name}: Not yet casted." %>
+  <% end %>
+  <br>
+<% end %>
