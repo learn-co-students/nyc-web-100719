@@ -3,8 +3,9 @@
 <%= form_with url: cast_movie_path, local: true do |f| %>
   <% @roles.each_with_index do |role, i| %>
     <%= f.label role.name %>
-    <%= collection_select :role, "actor_id", @actors, :id, :name, prompt: true %>
+    <%= collection_select :role, "actor_id[#{i}]", @actors, :id, :name, prompt: true %>
     <br>
   <% end %>
+  
   <%= f.submit "Cast this movie." %>
 <% end %>
