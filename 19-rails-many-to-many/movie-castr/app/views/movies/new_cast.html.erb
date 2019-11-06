@@ -1,10 +1,11 @@
 <h1>🍿🎥 'Sup. Let's Cast this shiz. <i><%= @movie.title %></i> 🎬🧟‍♀️</h1>
 
-<%= form_with url: cast_movie_path, local: true do |f| %>
-  <% @roles.each_with_index do |role, i| %>
-    <%= f.label role.name %>
-    <%= collection_select :role, "actor_id", @actors, :id, :name, prompt: true %>
+<%= form_tag cast_movie_path do %>
+  <% @roles.each do |role| %>
+    <%= label_tag "#{role.name}:" %>
+    <%= hidden_field_tag 'movie[cast][][role_id]', role.id %>
+    <%= select_tag 'movie[cast][][actor_id]', options_from_collection_for_select(@actors, :id, :name), prompt: 'Select an Actor...' %>
     <br>
   <% end %>
-  <%= f.submit "Cast this movie." %>
+  <%= submit_tag "Cast your movie" %>
 <% end %>

@@ -1,0 +1,21 @@
+<h1>Feelings#new</h1>
+<p>Find me in app/views/feelings/new.html.erb</p>
+
+<% if flash[:errors]%>
+  <% flash[:errors].each do |error| %>
+    <p style="color:red">❌ <%= error %></p>
+  <% end %>
+<% end%>
+
+<%= form_for @feeling do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br>
+  <%= f.label :crystal_gem %>
+  <%= f.collection_select :crystal_gem_id, @crystal_gems, :id, :name, prompt: true %>
+  <br>
+  <%= f.submit "What's on your mind?" %>
+<% end%>

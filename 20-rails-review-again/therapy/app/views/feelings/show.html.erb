@@ -1,0 +1,12 @@
+<h1><%= @feeling.name %> shiz 🎢</h1>
+
+
+<% if flash[:notice] %>
+  <h2><%= flash[:notice] %></h2>
+<% end %>
+
+<h3>Description</h3>
+
+<p><%= @feeling.description %></p>
+
+<h3>Crystal Gem: <%= @crystal_gem.name %></h3>
