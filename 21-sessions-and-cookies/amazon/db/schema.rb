@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_11_11_182311) do
     t.string "title"
     t.string "author"
     t.string "description"
+    t.integer "year"
     t.integer "page_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
