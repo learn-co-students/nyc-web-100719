@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<strong><%= 5 - session[:view_count] %> views left!!</strong>
+
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
@@ -10,15 +12,22 @@
   <%= @book.author %>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @book.description %>
-</p>
+<% if session[:view_count] > 4 %>
+  <h3>PAY FOR YOUR CONTENT OR CLEAR YOUR COOKIES!!</h3>
+  <%=  image_tag("steven_universe.gif") %>
+  <br>
+<% else %>
+  <p>
+    <strong>Description:</strong>
+    <%= @book.description %>
+  </p>
 
-<p>
-  <strong>Page count:</strong>
-  <%= @book.page_count %>
-</p>
+  <p>
+    <strong>Page count:</strong>
+    <%= @book.page_count %>
+  </p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
