@@ -1,0 +1,7 @@
+<h1>🐕 ALL THE DOGS 🐩</h1>
+
+<ul>
+  <% @dogs.each do |dog| %>
+    <li><strong><%= dog.name %></strong> - Owner: <%= dog.user.username %></li>
+  <% end %>
+</ul>

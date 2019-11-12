@@ -1,0 +1,17 @@
+<h1>🧡 Please Log In 🔥</h1>
+
+<% if flash[:alert]%>
+  <% flash[:alert].each do |message| %>
+    <p style='color:red;'>❌<%= message %></p>
+  <% end %>
+<% end %>
+
+<%= form_tag sessions_path do %>
+  <%= label_tag "Username" %>
+  <%= text_field_tag :username %>
+  <br>
+  <%= label_tag 'Password' %>
+  <%= password_field_tag :password %>
+  <br>
+  <%= submit_tag "Sign In" %>
+<% end %>
