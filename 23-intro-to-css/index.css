@@ -1,0 +1,58 @@
+body {
+  margin-top: 10px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #97C0E6;
+  display: flex;
+  justify-content: space-around;
+  font-family: sans-serif;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  border-left: solid white 2px;
+  border-right: solid white 2px;
+  transition: transform 1s;
+  width: 20em;
+  text-align: center;
+}
+
+nav a:hover {
+  transform: rotateX(360deg);
+}
+
+main {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+img {
+  width: 33.3vw;
+}
+
+#silhouette {
+  position: absolute;
+  width: 80vw;
+  top: 0vw;
+  left: 10vw;
+  filter: invert(0.2) drop-shadow(0.5);
+  opacity: 0.5;
+  animation: fade-in 5s;
+}
+
+h1 {
+  animation: fade-in 5s;
+}
+
+@keyframes fade-in {
+  0% {opacity: 0}
+  100% {opacity: 0.5}
+}
