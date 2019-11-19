@@ -1,6 +1,5 @@
 # Browser Events
 
-
 3 things that JS allows us to do:
 
 1. Allow user interaction <-- This lecture

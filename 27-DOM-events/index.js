@@ -1,4 +1,5 @@
 console.log("starting")
+
 let candies = [
     {
         id: 4,
