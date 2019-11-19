@@ -19,9 +19,9 @@ function multiplyByN(multiplier) {
 }
 
 
-// function multiplyBy2(num){
-//     return num * 2
-// }
+function multiplyBy5(num) {
+    return num * 5
+}
 
 
 
