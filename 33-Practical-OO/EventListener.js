@@ -2,7 +2,6 @@ class EventListener {
 
     static changeScore(button, candyObj) {
         button.addEventListener("click", function changeScore(e) {
-            console.log("clicked")
             let parentLi = e.target.parentNode
             let span = parentLi.querySelector("span")
             let score = e.target.dataset.purpose === "increase" ? parseInt(span.innerText) + 1 : parseInt(span.innerText) - 1
