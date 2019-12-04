@@ -10,6 +10,10 @@ class Candy {
         // this.addCandy = this.addCandy.bind(this)
     }
 
+    static sort() {
+        return Candy.all.sort((candy1, candy2) => candy1.id - candy2.id)
+    }
+
     createCandy() {
         let li = document.createElement("li")
         li.className = "candy-item"
@@ -24,10 +28,10 @@ class Candy {
         let upButton = li.querySelector("button")
         let downButton = li.querySelectorAll("button")[1]
         let deleteButton = li.querySelectorAll("button")[2]
-        EventListener.changeScore(upButton)
-        EventListener.changeScore(downButton)
-        EventListener.delete(deleteButton)
         this.node = li
+        EventListener.changeScore(upButton, this)
+        EventListener.changeScore(downButton, this)
+        EventListener.delete(deleteButton, this)
         return li
     }
 
