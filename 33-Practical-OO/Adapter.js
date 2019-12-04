@@ -39,7 +39,6 @@ class Adapter {
                 "accepts": "application/json"
             },
         })
-        //     .then(function(){ removeCandy(e)})
     }
 
 }
