@@ -1,5 +1,6 @@
 const parentUl = document.getElementsByTagName("ul")[0]
 
+// Code to create, sort, and append candy li's
 Adapter.get("http://localhost:3000/api/v1/candies").then(function (response) {
     response.data.forEach((candyObj) => {
         new Candy(candyObj.attributes)
@@ -8,6 +9,8 @@ Adapter.get("http://localhost:3000/api/v1/candies").then(function (response) {
     candy.appendCandy(parentUl)
 }))
 
+
+// Code To Add Form Functionality
 let button = document.createElement("button")
 button.dataset.purpose = "form"
 button.innerText = "add candy"
