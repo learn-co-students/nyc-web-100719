@@ -1,4 +1,5 @@
 const parentUl = document.getElementsByTagName("ul")[0]
+
 Adapter.get("http://localhost:3000/api/v1/candies").then(function (response) {
     response.data.forEach((candyObj) => {
         new Candy(candyObj.attributes)
