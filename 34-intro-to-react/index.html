@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+    // ReactDOM.render(htmlLooking, someNode) (whatIWantToShowUp, whereIWantItToShowUp)
+    
+    
+    
+    ReactDOM.render( // div class="card"
+    <div className="container" id="holder" style={{}} >
+        <Card title='Hola mundo!' caption='Bienvenido a React' excited={true} />
+        <Card title='Hello world!' sign="gemini" excited={false} />
+        
+        </div>
+        , 
+        document.getElementById('root')
+        )
+
+    function Card(props){
+        console.log(props)
+        return (
+                <div className="card">
+                <h1>{props.title}</h1>
+                <h3>{props.caption}{props.excited ? "!!!!!!!" : "....."}</h3>
+            </div>
+        )
+    }
+
+    </script>
+  </body>
+</html>
