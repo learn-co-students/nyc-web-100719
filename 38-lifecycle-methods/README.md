@@ -2,14 +2,17 @@ Component Lifecycle Methods
 ===========================
 
 ## SWBATs
-- [ ] Write methods that interact with data at different points throughout a component's life
-- [ ] Identify the most-used Lifecycle Methods
-- [ ] Explain why we `fetch` data using `componentDidMount`
-- [ ] Identify problems caused by asynchronicity in React
+- [x] Write methods that interact with data at different points throughout a component's life
+- [x] Identify the most-used Lifecycle Methods
+- [x] Explain why we `fetch` data using `componentDidMount`
+- [x] Identify problems caused by asynchronicity in React
 
 ## Lecture Notes
 
 [React Spinner Loader](https://www.npmjs.com/package/react-loader-spinner)
+
+
+
 
 ### Mounting (Birth)
 When a component is initially rendered

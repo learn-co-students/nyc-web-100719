@@ -19,25 +19,24 @@ class MainContainer extends React.Component{
             level={stress.level} 
             image={stress.image}
             duration={stress.duration}
-            color={this.props.color}
             handleClick={this.props.handleClick}
           />
           }
         )
       }
 
-    fetchStrssrs = () => {
+    componentDidMount() {
       fetch('http://localhost:3001/strssrs')
         .then(res => res.json())
         .then(data => {
           this.setState({ strssrs: data })
         })
+      
     }
 
     render(){ // eventually some conditional logic for if i'm looking at ALL strssrs or JUST ONE
         return (
           <>
-            <button id="load" onClick={this.fetchStrssrs}>Get Strssrs</button>
             <div className="stress-holder">
                 {this.renderStrssrs()}
             </div>
