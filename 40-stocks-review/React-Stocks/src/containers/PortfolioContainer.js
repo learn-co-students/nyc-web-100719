@@ -3,7 +3,7 @@ import Stock from '../components/Stock'
 
 class PortfolioContainer extends Component {
   renderStocks = () => {
-    return this.props.portfolio.map(stock => <Stock addStock={this.props.addStock} {...stock} />)
+    return this.props.portfolio.map(stock => <Stock key={stock.id} removeStock={this.props.removeStock} {...stock} />)
   }
 
   render() {

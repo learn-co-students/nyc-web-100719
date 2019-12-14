@@ -16,8 +16,8 @@ class MainContainer extends Component {
 
   state = {
     stocks: [],
-    portfolio: [],
-    filter: ''
+    filter: '',
+    order: null
   }
 
   componentDidMount(){
@@ -29,32 +29,57 @@ class MainContainer extends Component {
       })
   }
 
-  addStock = (portfolio) => {
-    this.setState({ portfolio: [...this.state.portfolio, portfolio ]})
-    // vs... this.state.portfolio.push(portfolio ) ==> NO GO CAUSE IT MUTATES
+  addStock = (id) => {
+    let targetStockInd = this.state.stocks.findIndex(stock => stock.id === id)
+    let newStocks = [...this.state.stocks] // create a copy 
+    newStocks[targetStockInd] = {...newStocks[targetStockInd], inPortfolio: true}
+
+    this.setState({ stocks: newStocks })
+  }
+
+  removeStock = (id) => {
+    let targetStockInd = this.state.stocks.findIndex(stock => stock.id === id)
+    let newStocks = [...this.state.stocks] // create a copy 
+    newStocks[targetStockInd] = {...newStocks[targetStockInd], inPortfolio: false}
+
+    this.setState({ stocks: newStocks })
   }
 
   changeFilter = (value) => {
-    console.log(value)
     this.setState({ filter: value })
   }
 
+  changeOrder = (value) => {
+    this.setState({ order: value })
+  }
+
   render() {
-    // let displayedStocks = this.state.stocks.filter(stock => stock.type.includes( this.state.filter))
+    let portfolioStocks = this.state.stocks.filter(stock => stock.inPortfolio) // same as stock.inPortfolio === true
+
+    let displayedStocks = this.state.stocks.filter(stock => stock.type.includes( this.state.filter ))
+    if (this.state.order === 'abc'){
+      displayedStocks = displayedStocks.sort((stock1, stock2) => stock1.name.toLowerCase() < stock2.name.toLowerCase() ? -1 : 1)
+    } else if (this.state.order === 'price'){
+      displayedStocks = displayedStocks.sort((stock1, stock2) => stock1.price < stock2.price ? -1 : 1)
+    }
 
     return (
       <div>
-        <SearchBar changeFilter={this.changeFilter}/>
+        <SearchBar
+          filter={this.state.filter}
+          order={this.state.order}
+          changeFilter={this.changeFilter}
+          changeOrder={this.changeOrder}/>
 
           <div className="row">
             <div className="col-8">
 
-              <StockContainer addStock={this.addStock} stocks={this.state.stocks}/>
+              <StockContainer addStock={this.addStock} stocks={displayedStocks}/>
 
             </div>
             <div className="col-4">
 
-              <PortfolioContainer portfolio={this.state.portfolio}/>
+              <PortfolioContainer removeStock={this.removeStock} portfolio={portfolioStocks}/>
 
             </div>
           </div>

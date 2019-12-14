@@ -4,7 +4,7 @@ import Stock from '../components/Stock'
 
 class StockContainer extends Component {
   renderStocks = () => {
-    return this.props.stocks.map(stock => <Stock addStock={this.props.addStock} {...stock} />)
+    return this.props.stocks.map(stock => <Stock key={stock.id} addStock={this.props.addStock} {...stock} />)
   }
 
   render() {
