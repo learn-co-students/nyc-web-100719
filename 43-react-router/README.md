@@ -12,16 +12,37 @@ React Router
 - [ ] **BONUS** Use `Redirect`to navigate pages
 
 
-Features TODO UPDATE!!!!!!!!!!!!!!!!
+Features
 - [MovieApp Wireframe and Component Hierarchy](https://awwapp.com/b/ui0yjws5o/)
 - [ ] different routes for main movie view and login 
 - [ ] dynamic routing for individual movie view
 
 ## Lecture Notes
-- [Example of All Ze Routes](https://github.com/sbal13/Project_Athena_client/blob/master/src/App.js)
+- [Example with All of Ze Routes](https://github.com/sbal13/Project_Athena_client/blob/master/src/App.js)
 
+## Benefits of SPAs
+- speed ==> one big request at the beginning and no further requests 
+- user perspective instant gratification (don't have to get redirected)
 
+## Issues of SPAs
+- analytics are hard to track (ie which pages users are visiting)
+- first load can take a while 
+- organizational issues. Routes clearly define what you're accessing where
+    - accessibility! 
+- sharing and navigation! can't do it.
+    - go check out "Joker". Go to localhost(or where its hosted) and then follow your instrucftions to get to Joker. 
 
+## Dyanmic Routing
+/users/:id
+
+"/"
+"/signup"
+"/movies"
+"/login"
+"/movies/:id"
+
+## Parking Lot
+- Component vs Render notation efficiency
 
 
 ### Using React Router

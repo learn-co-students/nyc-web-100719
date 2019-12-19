@@ -49,11 +49,12 @@ class MoviePage extends React.Component {
   }
 
   render() {
-    let selectedMovie = this.props.selectedMovie;
+    console.log(this.props)
+    let selectedMovie = this.props.movies.find(movie => movie.id === parseInt(this.props.match.params.id))
 
     return (
       <div className="movie-page">
-          <div className="back-button">⬅️</div>
+          <div className="back-button" onClick={() => this.props.history.goBack()}>⬅️</div>
           {/* make sure selectedMovie isn't null before you try to render anything */}
           {selectedMovie && this.renderMovieInfo(selectedMovie)} 
       </div>
